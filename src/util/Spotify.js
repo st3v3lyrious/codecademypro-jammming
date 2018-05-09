@@ -1,6 +1,5 @@
 const clientID = 'e78e3992d1af474a98696841d4e255f8';
 const redirectURI = 'http://st3v3lyrious.surge.sh';
-const scope = 'playlist-modify-private';
 
 let accessToken;
 let expiresIn;
@@ -19,7 +18,7 @@ const Spotify = {
       window.history.pushState('Access Token', null, '/');
       return accessToken;
     } else {
-      window.location = `https://accounts.spotify.com/authorize?client_id=${clientID}&redirect_uri=${redirectURI}&response_type=token&scope=${scope}`;
+      window.location = `https://accounts.spotify.com/authorize?client_id=${clientID}&redirect_uri=${redirectURI}&response_type=token`;
     }
   },
 
